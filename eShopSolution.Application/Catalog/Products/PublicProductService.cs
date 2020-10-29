@@ -5,8 +5,6 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using eShopSolution.ViewModels.Common;
 using eShopSolution.ViewModels.Catalog.Products;
-using eShopSolution.ViewModels.Catalog.Products.Manage;
-
 namespace eShopSolution.Application.Catalog.Products
 {
     public class PublicProductService : IPublicProductService
@@ -87,11 +85,6 @@ namespace eShopSolution.Application.Catalog.Products
                 Items = data
             };
             return pagedResult;
-        }
-
-        public Task<PagedResult<ProductViewModel>> GetAllByCategoryId(GetProductPagingRequest request)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
