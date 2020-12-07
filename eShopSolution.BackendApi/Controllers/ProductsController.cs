@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eShopSolution.BackendApi.Controllers
 {
-    // api/products
+    //api/products
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
@@ -15,34 +15,25 @@ namespace eShopSolution.BackendApi.Controllers
     {
         private readonly IProductService _productService;
 
-        public ProductsController(IProductService publicProductService)
+        public ProductsController(
+            IProductService productService)
         {
-            _productService = publicProductService;
+            _productService = productService;
         }
 
-        //http://localhost:port/products
-        /*[HttpGet("{languageId}")]
-        public async Task<IActionResult> GetAll(string languageId)
+        [HttpGet("paging")]
+        public async Task<IActionResult> GetAllPaging([FromQuery] GetManageProductPagingRequest request)
         {
-            var products = await _publicProductService.GetAll(languageId);
-            return Ok(products);
-        }*/
-
-        //http://localhost:port/products?pageIndex=1&pagesize=10&CategoryUd
-        [HttpGet("{languageId}")]
-        public async Task<IActionResult> GetAllPaging(string languageId, [FromQuery] GetPublicProductPagingRequest request)
-        {
-            var products = await _productService.GetAllByCategoryId(languageId, request);
+            var products = await _productService.GetAllPaging(request);
             return Ok(products);
         }
 
-        //http://localhost:port/product/1/vi-VN
         [HttpGet("{productId}/{languageId}")]
         public async Task<IActionResult> GetById(int productId, string languageId)
         {
             var product = await _productService.GetById(productId, languageId);
             if (product == null)
-                return BadRequest("khong tim thay san pham");
+                return BadRequest("Cannot find product");
             return Ok(product);
         }
 
@@ -84,13 +75,14 @@ namespace eShopSolution.BackendApi.Controllers
             return Ok();
         }
 
-        [HttpPatch("{productId}/{newprice}")]
-        public async Task<IActionResult> UpdatePrice(int productId, decimal newprice)
+        [HttpPatch("{productId}/{newPrice}")]
+        public async Task<IActionResult> UpdatePrice(int productId, decimal newPrice)
         {
-            var isSuccessful = await _productService.UpdatePrice(productId, newprice);
-            if (!isSuccessful)
-                return BadRequest();
-            return Ok();
+            var isSuccessful = await _productService.UpdatePrice(productId, newPrice);
+            if (isSuccessful)
+                return Ok();
+
+            return BadRequest();
         }
 
         //Images
