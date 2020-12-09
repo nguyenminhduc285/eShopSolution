@@ -18,10 +18,9 @@ namespace eShopSolution.Data.Extensions
                 );
 
             modelBuilder.Entity<Language>().HasData(
-                new Language() { Id = "vi-VN", Name = "Tieng Viet", IsDefault = true },
-                new Language() { Id = "en-US", Name = "English", IsDefault = false }
+                new Language() { Id = "vi", Name = "Tieng Viet", IsDefault = true },
+                new Language() { Id = "en", Name = "English", IsDefault = false }
                 );
-
 
             modelBuilder.Entity<Category>().HasData(
                 new Category()
@@ -31,7 +30,6 @@ namespace eShopSolution.Data.Extensions
                     ParentId = null,
                     SortOrder = 1,
                     Status = Enums.Status.Active,
-
                 },
                 new Category()
                 {
@@ -48,7 +46,7 @@ namespace eShopSolution.Data.Extensions
                     Id = 1,
                     CategoryId = 2,
                     Name = "Ao Khoac Nu",
-                    LanguageId = "vi-VN",
+                    LanguageId = "vi",
                     SeoAlias = "Ao Cho Nu",
                     SeoDescription = "San pham ao thoi trang nu",
                     SeoTitle = "Ao Khoac"
@@ -58,7 +56,7 @@ namespace eShopSolution.Data.Extensions
                     Id = 2,
                     CategoryId = 2,
                     Name = "Woman Jacket",
-                    LanguageId = "en-US",
+                    LanguageId = "en",
                     SeoAlias = "Jaket for Female",
                     SeoDescription = "The Fashion Product for Female",
                     SeoTitle = "Jacket"
@@ -68,7 +66,7 @@ namespace eShopSolution.Data.Extensions
                     Id = 3,
                     CategoryId = 1,
                     Name = "Ao Khoac Nam",
-                    LanguageId = "vi-VN",
+                    LanguageId = "vi",
                     SeoAlias = "Ao Cho Nam",
                     SeoDescription = "San pham ao thoi trang nam",
                     SeoTitle = "Ao Khoac"
@@ -78,7 +76,7 @@ namespace eShopSolution.Data.Extensions
                     Id = 4,
                     CategoryId = 1,
                     Name = "Men Jacket",
-                    LanguageId = "en-US",
+                    LanguageId = "en",
                     SeoAlias = "Jaket for Male",
                     SeoDescription = "The Fashion Product for Male",
                     SeoTitle = "Jacket"
@@ -92,7 +90,7 @@ namespace eShopSolution.Data.Extensions
                     OriginalPrice = 100000,
                     Price = 200000,
                     Stock = 0,
-                    ViewCount = 0, 
+                    ViewCount = 0,
                 });
 
             modelBuilder.Entity<ProductTranslation>().HasData(
@@ -101,7 +99,7 @@ namespace eShopSolution.Data.Extensions
                     Id = 1,
                     ProductId = 1,
                     Name = "Ao Khoac Nam",
-                    LanguageId = "vi-VN",
+                    LanguageId = "vi",
                     SeoAlias = "Ao Cho Nam",
                     SeoDescription = "San pham ao thoi trang nam",
                     SeoTitle = "Ao Khoac",
@@ -113,7 +111,7 @@ namespace eShopSolution.Data.Extensions
                     Id = 2,
                     ProductId = 1,
                     Name = "Men Jacket",
-                    LanguageId = "en-US",
+                    LanguageId = "en",
                     SeoAlias = "Jaket for Male",
                     SeoDescription = "The Fashion Product for Male",
                     SeoTitle = "Jacket",
@@ -156,7 +154,6 @@ namespace eShopSolution.Data.Extensions
                 RoleId = roleId,
                 UserId = adminId
             });
-
         }
     }
 }

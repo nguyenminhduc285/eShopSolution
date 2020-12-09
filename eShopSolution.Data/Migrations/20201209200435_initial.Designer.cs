@@ -10,8 +10,8 @@ using eShopSolution.Data.EF;
 namespace eShopSolution.Data.Migrations
 {
     [DbContext(typeof(EShopDbContext))]
-    [Migration("20201027173342_ChangeFileLengthType")]
-    partial class ChangeFileLengthType
+    [Migration("20201209200435_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -182,7 +182,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = new Guid("8d04dce2-969a-435d-bba4-df3f325983dc"),
-                            ConcurrencyStamp = "cba7e183-4d9a-44d3-a7dd-67eef9bd0f4e",
+                            ConcurrencyStamp = "75541226-1c56-4ef7-8b8c-99b694be622d",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -259,7 +259,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = new Guid("69bd714f-9576-45ba-b5b7-f00649be00de"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "78fcc5cb-d934-4782-a631-ed207e48c9d7",
+                            ConcurrencyStamp = "732ee8a5-942d-4e40-b7d6-70825af5322d",
                             Dob = new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "nguyenminhducit285@gmail.com",
                             EmailConfirmed = true,
@@ -268,7 +268,7 @@ namespace eShopSolution.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "nguyenminhducit285@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEA4otKR4GYvy4NMKhHxJ/ruwflpyzLTPkQBR4J3e9w7aWmfVW4QdQp/OXSd/Lv09FQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEL/vaQFx55UphOZtqQGGd+Ok21q0FYI5NJOIqeZpfaWLCtX81VSBoxuZqWNs9YHDDQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -387,7 +387,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = 1,
                             CategoryId = 2,
-                            LanguageId = "vi-VN",
+                            LanguageId = "vi",
                             Name = "Ao Khoac Nu",
                             SeoAlias = "Ao Cho Nu",
                             SeoDescription = "San pham ao thoi trang nu",
@@ -397,7 +397,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = 2,
                             CategoryId = 2,
-                            LanguageId = "en-US",
+                            LanguageId = "en",
                             Name = "Woman Jacket",
                             SeoAlias = "Jaket for Female",
                             SeoDescription = "The Fashion Product for Female",
@@ -407,7 +407,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = 3,
                             CategoryId = 1,
-                            LanguageId = "vi-VN",
+                            LanguageId = "vi",
                             Name = "Ao Khoac Nam",
                             SeoAlias = "Ao Cho Nam",
                             SeoDescription = "San pham ao thoi trang nam",
@@ -417,7 +417,7 @@ namespace eShopSolution.Data.Migrations
                         {
                             Id = 4,
                             CategoryId = 1,
-                            LanguageId = "en-US",
+                            LanguageId = "en",
                             Name = "Men Jacket",
                             SeoAlias = "Jaket for Male",
                             SeoDescription = "The Fashion Product for Male",
@@ -481,13 +481,13 @@ namespace eShopSolution.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "vi-VN",
+                            Id = "vi",
                             IsDefault = true,
                             Name = "Tieng Viet"
                         },
                         new
                         {
-                            Id = "en-US",
+                            Id = "en",
                             IsDefault = false,
                             Name = "English"
                         });
@@ -592,7 +592,7 @@ namespace eShopSolution.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2020, 10, 28, 0, 33, 41, 62, DateTimeKind.Local).AddTicks(9640),
+                            DateCreated = new DateTime(2020, 12, 10, 3, 4, 35, 75, DateTimeKind.Local).AddTicks(5219),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
@@ -705,7 +705,7 @@ namespace eShopSolution.Data.Migrations
                             Id = 1,
                             Description = "",
                             Details = "Mo ta san pham",
-                            LanguageId = "vi-VN",
+                            LanguageId = "vi",
                             Name = "Ao Khoac Nam",
                             ProductId = 1,
                             SeoAlias = "Ao Cho Nam",
@@ -717,7 +717,7 @@ namespace eShopSolution.Data.Migrations
                             Id = 2,
                             Description = "",
                             Details = "Description of product",
-                            LanguageId = "en-US",
+                            LanguageId = "en",
                             Name = "Men Jacket",
                             ProductId = 1,
                             SeoAlias = "Jaket for Male",
