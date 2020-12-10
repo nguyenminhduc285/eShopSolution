@@ -12,4 +12,8 @@
     <PackageReference Include="LazZiya.ExpressLocalization" Version="4.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\eShopSolution.ApiIntergration\eShopSolution.ApiIntegration.csproj" />
+  </ItemGroup>
+
 </Project>

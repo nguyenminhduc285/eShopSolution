@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using eShopSolution.Utilities.Constants;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using eShopSolution.Utilities.Constants;
-using System.Collections.Generic;
 
-namespace eShopSolution.AdminApp.Services
+namespace eShopSolution.ApiIntegration
 {
     public class BaseApiClient
     {
