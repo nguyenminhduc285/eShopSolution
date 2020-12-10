@@ -19,7 +19,6 @@ namespace eShopSolution.ViewModels.Catalog.Products
 
         public IFormFile ThumbnailImage { set; get; }
 
-
-
+        public bool? IsFeature { get; set; }
     }
 }
