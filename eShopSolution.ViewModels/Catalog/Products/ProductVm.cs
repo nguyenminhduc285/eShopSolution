@@ -22,7 +22,7 @@ namespace eShopSolution.ViewModels.Catalog.Products
 
         public string SeoAlias { get; set; }
         public string LanguageId { set; get; }
-        public bool? IsFeature { get; set; }
+        public bool? IsFeatured { get; set; }
         public string ThumbnailImage { get; set; }
         public List<string> Categories { get; set; } = new List<string>();
     }
