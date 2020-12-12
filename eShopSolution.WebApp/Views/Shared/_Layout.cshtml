@@ -5,9 +5,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Bootshop online Shopping cart</title>
+    <title>@ViewData["Title"]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="@ViewData["Description"]">
     <meta name="author" content="">
     <!--Less styles -->
     <!-- Other Less css file //different less files has different color scheam
@@ -40,7 +40,6 @@
                 <div class="span6">Welcome!<strong> User</strong></div>
                 <div class="span6">
                     <div class="pull-right">
-                        <p> abc</p>
                         <language-nav language-label="NativeName"
                                       cookie-handler-url="@(Url.Action("SetCultureCookie", "Home", new { area= "", cltr="{0}", returnUrl="{1}" }))">
                         </language-nav>
