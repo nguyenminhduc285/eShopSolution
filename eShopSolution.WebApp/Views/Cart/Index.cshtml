@@ -1,8 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var culture = CultureInfo.CurrentCulture.Name;
 }
-
 @section scripts{
     <script src="~/js/cart.js"></script>
     <script>
@@ -12,7 +12,7 @@
 }
 
 <ul class="breadcrumb">
-    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
+    <li><a href="/@culture/Home/Index">Home</a> <span class="divider">/</span></li>
     <li class="active"> SHOPPING CART</li>
 </ul>
 
@@ -23,7 +23,7 @@
 
 <hr class="soft" />
 
-<table class="table table-bordered">
+<table class="table table-bordered" id="tbl_cart">
     <thead>
         <tr>
             <th>Product</th>
