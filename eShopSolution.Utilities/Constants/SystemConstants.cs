@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace eShopSolution.Utilities.Constants
+﻿namespace eShopSolution.Utilities.Constants
 {
     public class SystemConstants
     {
         public const string MainConnectionString = "eShopSolutionDb";
         public const string CartSession = "CartSession";
+        public const string USER_CONTENT_FOLDER_NAME = "user-content";
 
         public class AppSettings
         {

@@ -146,7 +146,6 @@ namespace eShopSolution.ApiIntegration
         public async Task<ProductVm> GetById(int id, string languageId)
         {
             var data = await GetAsync<ProductVm>($"/api/products/{id}/{languageId}");
-
             return data;
         }
 
